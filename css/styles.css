@@ -63,6 +63,8 @@ body {
 
 .app {
   padding-top: 4rem;
+  max-width: 127rem;
+  margin: 0 auto;
 }
 
 .heading-primary {
@@ -94,9 +96,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  box-shadow: 0px -4px 4px -1px rgba(17, 23, 41, 0.05),
-    -4px 0px 4px -1px rgba(17, 23, 41, 0.05),
-    4px 0px 4px -1px rgba(17, 23, 41, 0.05);
+  box-shadow: 0px -1px 4px 0px rgba(17, 23, 41, 0.05),
+    1px 0px 4px 0px rgba(17, 23, 41, 0.05),
+    -1px 0px 4px 0px rgba(17, 23, 41, 0.05);
 }
 
 .items {
@@ -155,6 +157,7 @@ body {
 }
 
 .coupon-input {
+  flex: 2;
   width: 17.5rem;
   padding: 1.6rem;
   border: 1px solid #d2d5da;
@@ -162,6 +165,7 @@ body {
 }
 
 .coupon-btn {
+  flex: 1;
   padding: 1.6rem 1.2rem;
   background-color: #1d1d1f;
   border-radius: var(--rounded-xs);
@@ -185,14 +189,18 @@ body {
   font-weight: 600;
 }
 
+.info-total {
+  color: var(--clr-dark);
+}
+
 /* Contact */
 
 .contact {
   background-color: #fff;
   border-radius: 0 0 var(--rounded-md) var(--rounded-md);
-  box-shadow: -4px 0px 4px -1px rgba(17, 23, 41, 0.05),
-    /* bal */ 4px 0px 4px -1px rgba(17, 23, 41, 0.05),
-    /* jobb */ 0px 6px 4px -2px rgba(17, 23, 41, 0.05); /* alsó */
+  box-shadow: 1px 0px 4px 0px rgba(17, 23, 41, 0.05),
+    0px 1px 4px 0px rgba(17, 23, 41, 0.05),
+    -1px 0px 4px 0px rgba(17, 23, 41, 0.05);
 }
 
 .contact-form {
@@ -232,6 +240,7 @@ body {
   font-weight: 600;
 }
 
+.coupon-input:placeholder,
 .contact-label,
 .contact-input::placeholder {
   color: var(--clr-dark-blue);
@@ -273,9 +282,26 @@ body {
 
   .summary {
     border-radius: var(--rounded-md) 0 0 var(--rounded-md);
+    background-color: var(--bg-cart-items);
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    box-shadow: 0px 1px 4px 0px rgba(17, 23, 41, 0.05),
+      -1px 0px 4px 0px rgba(17, 23, 41, 0.05),
+      0px 1px 4px 0px rgba(17, 23, 41, 0.05);
   }
 
   .contact {
     border-radius: 0 var(--rounded-md) var(--rounded-md) 0;
+    background-color: #fff;
+    box-shadow: 0px -1px 4px 0px rgba(17, 23, 41, 0.05),
+      1px 0px 4px 0px rgba(17, 23, 41, 0.05),
+      0px 2px 4px 0px rgba(17, 23, 41, 0.05);
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .coupon-input {
+    flex: 3;
   }
 }
