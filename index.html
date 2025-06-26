@@ -5,6 +5,8 @@
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Device E-shop Checkout</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <!-- Inter Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -95,6 +97,7 @@
         <!-- Coupon -->
         <form class="coupon-container">
           <input
+            required
             class="coupon-input"
             type="text"
             placeholder="Enter coupon code"
@@ -122,8 +125,9 @@
         <h2 class="heading-secondary">Contact Information</h2>
         <form class="contact-form">
           <div class="contact-input-container">
-            <label for="">First & Last name</label>
+            <label class="contact-label" for="">First & Last name</label>
             <input
+              required
               class="contact-input"
               type="text"
               placeholder="Enter first & last name"
@@ -131,8 +135,9 @@
             />
           </div>
           <div class="contact-input-container">
-            <label for="">E-mail address</label>
+            <label class="contact-label" for="">E-mail address</label>
             <input
+              required
               class="contact-input"
               type="email"
               placeholder="Enter e-mail address"
@@ -141,14 +146,19 @@
           </div>
           <div class="contact-form-bottom">
             <div class="contact-input-container">
-              <label for="">Country</label>
-              <select class="contact-input" name="" id="">
+              <label class="contact-label" for="">Country</label>
+              <select class="contact-input select-input" name="" id="">
                 <option value="finland">Finland</option>
               </select>
             </div>
             <div class="contact-input-container">
-              <label for="">Postal Code</label>
-              <input class="contact-input" type="text" placeholder="00270" />
+              <label class="contact-label" for="">Postal Code</label>
+              <input
+                required
+                class="contact-input"
+                type="text"
+                placeholder="00270"
+              />
             </div>
           </div>
           <button class="contact-btn">Continue</button>
