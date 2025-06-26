@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Device E-shop Checkout</title>
     <!-- Favicon -->
@@ -30,7 +29,7 @@
         <!-- Items -->
         <div class="items">
           <!-- Item 1 - iPhone 12 Pro -->
-          <div class="item">
+          <article class="item">
             <div class="item-image-container">
               <img
                 class="item-image"
@@ -46,12 +45,14 @@
               <p class="item-color">Golden</p>
               <div class="item-info-bottom">
                 <p class="item-count">x 1</p>
-                <img src="./images/close-icon.svg" alt="Remove item icon." />
+                <button class="remove-btn" aria-label="Remove iPhone 12 Pro">
+                  <img src="./images/close-icon.svg" alt="Remove item icon." />
+                </button>
               </div>
             </div>
-          </div>
+          </article>
           <!-- Item 2 - Apple Watch -->
-          <div class="item">
+          <article class="item">
             <div class="item-image-container">
               <img
                 class="item-image"
@@ -67,12 +68,14 @@
               <p class="item-color">Blue</p>
               <div class="item-info-bottom">
                 <p class="item-count">x 1</p>
-                <img src="./images/close-icon.svg" alt="Remove item icon." />
+                <button class="remove-btn" aria-label="Remove Apple Watch">
+                  <img src="./images/close-icon.svg" alt="Remove item icon." />
+                </button>
               </div>
             </div>
-          </div>
+          </article>
           <!-- Item 3 - iMac -->
-          <div class="item">
+          <article class="item">
             <div class="item-image-container">
               <img
                 class="item-image"
@@ -88,10 +91,12 @@
               <p class="item-color">Green</p>
               <div class="item-info-bottom">
                 <p class="item-count">x 1</p>
-                <img src="./images/close-icon.svg" alt="Remove item icon." />
+                <button class="remove-btn" aria-label="Remove iMac">
+                  <img src="./images/close-icon.svg" alt="Remove item icon." />
+                </button>
               </div>
             </div>
-          </div>
+          </article>
         </div>
         <div class="divider"></div>
         <!-- Coupon -->
@@ -101,8 +106,9 @@
             class="coupon-input"
             type="text"
             placeholder="Enter coupon code"
+            required
           />
-          <button class="coupon-btn">Apply Coupon</button>
+          <button class="btn coupon-btn">Apply Coupon</button>
         </form>
         <!-- Summary Info -->
         <div class="summary-info">
@@ -125,19 +131,21 @@
         <h2 class="heading-secondary">Contact Information</h2>
         <form class="contact-form">
           <div class="contact-input-container">
-            <label class="contact-label" for="">First & Last name</label>
+            <label class="contact-label" for="name">First & Last name</label>
             <input
               required
               class="contact-input"
+              id="name"
               type="text"
               placeholder="Enter first & last name"
               name="name"
             />
           </div>
           <div class="contact-input-container">
-            <label class="contact-label" for="">Email address</label>
+            <label class="contact-label" for="email">Email address</label>
             <input
               required
+              id="email"
               class="contact-input"
               type="email"
               placeholder="Enter email address"
@@ -146,22 +154,31 @@
           </div>
           <div class="contact-form-bottom">
             <div class="contact-input-container">
-              <label class="contact-label" for="">Country</label>
-              <select class="contact-input select-input" name="" id="">
+              <label class="contact-label" for="country">Country</label>
+              <select
+                class="contact-input select-input"
+                name="country"
+                id="country"
+              >
                 <option value="finland">Finland</option>
+                <option value="poland">Poland</option>
+                <option value="hungary">Hungary</option>
+                <option value="france">France</option>
               </select>
             </div>
             <div class="contact-input-container">
-              <label class="contact-label" for="">Postal Code</label>
+              <label class="contact-label" for="zip">Postal Code</label>
               <input
                 required
+                id="zip"
+                name="zip"
                 class="contact-input"
                 type="text"
                 placeholder="00270"
               />
             </div>
           </div>
-          <button class="contact-btn">Continue</button>
+          <button type="submit" class="btn">Continue</button>
         </form>
       </section>
     </main>
