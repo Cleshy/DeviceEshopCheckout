@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Checkout page for your electronic devices order - iPhone, Apple Watch, iMac. Secure and fast checkout."
+    />
     <title>Device E-shop Checkout</title>
+    <!-- Preload background image -->
+    <link
+      rel="preload"
+      as="image"
+      href="/images/webp/background-image.webp"
+      type="image/webp"
+    />
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <!-- Inter Google Font -->
@@ -33,7 +44,11 @@
             <div class="item-image-container">
               <img
                 class="item-image"
-                src="./images/Gold.png"
+                src="./images/webp/Gold.webp"
+                srcset="
+                  ./images/webp/Gold.webp    1x,
+                  ./images/webp/Gold@2x.webp 2x
+                "
                 alt="Image of Gold Phone"
               />
             </div>
@@ -46,7 +61,10 @@
               <div class="item-info-bottom">
                 <p class="item-count">x 1</p>
                 <button class="remove-btn" aria-label="Remove iPhone 12 Pro">
-                  <img src="./images/close-icon.svg" alt="Remove item icon." />
+                  <img
+                    src="./images/icons/close-icon.svg"
+                    alt="Remove item icon."
+                  />
                 </button>
               </div>
             </div>
@@ -56,7 +74,11 @@
             <div class="item-image-container">
               <img
                 class="item-image"
-                src="./images/Apple-watch.png"
+                src="./images/webp/Apple-watch.webp"
+                srcset="
+                  ./images/webp/Apple-watch.webp    1x,
+                  ./images/webp/Apple-watch@2x.webp 2x
+                "
                 alt="Image of an Apple Watch"
               />
             </div>
@@ -69,7 +91,10 @@
               <div class="item-info-bottom">
                 <p class="item-count">x 1</p>
                 <button class="remove-btn" aria-label="Remove Apple Watch">
-                  <img src="./images/close-icon.svg" alt="Remove item icon." />
+                  <img
+                    src="./images/icons/close-icon.svg"
+                    alt="Remove item icon."
+                  />
                 </button>
               </div>
             </div>
@@ -79,7 +104,11 @@
             <div class="item-image-container">
               <img
                 class="item-image"
-                src="./images/iMac.png"
+                src="./images/webp/iMac.webp"
+                srcset="
+                  ./images/webp/iMac.webp    1x,
+                  ./images/webp/iMac@2x.webp 2x
+                "
                 alt="Image of an iMac"
               />
             </div>
@@ -92,7 +121,10 @@
               <div class="item-info-bottom">
                 <p class="item-count">x 1</p>
                 <button class="remove-btn" aria-label="Remove iMac">
-                  <img src="./images/close-icon.svg" alt="Remove item icon." />
+                  <img
+                    src="./images/icons/close-icon.svg"
+                    alt="Remove item icon."
+                  />
                 </button>
               </div>
             </div>
