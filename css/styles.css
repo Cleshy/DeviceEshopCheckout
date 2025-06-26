@@ -53,9 +53,13 @@ body {
   font-size: 2.4rem;
 }
 
+.heading-secondary {
+  font-size: 1.6rem;
+}
+
 /* Main Styles */
 
-.main {
+.app {
   padding-inline: 1.2rem;
 }
 
@@ -76,25 +80,25 @@ body {
   border-radius: var(--rounded-full);
 }
 
-/* Cart */
-.cart-container {
+.summary,
+.contact {
   padding: 3.2rem;
 }
 
-.cart-container {
-  background-color: var(--bg-cart-items);
-}
+/* Summary Section */
 
-.cart-items {
+.summary {
+  background-color: var(--bg-cart-items);
   border-radius: var(--rounded-md) var(--rounded-md) 0 0;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
 }
 
-.cart-checkout {
-  background-color: var(--bg-cart-checkout);
-  border-radius: 0 0 var(--rounded-md) var(--rounded-md);
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 }
 
 .item {
@@ -141,7 +145,7 @@ body {
   justify-content: space-between;
 }
 
-.coupon-buttons {
+.coupon-container {
   display: flex;
   gap: 0.8rem;
 }
@@ -161,6 +165,63 @@ body {
   width: 100%;
   color: #fff;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: var(--clr-dark-blue);
+}
+
+.summary-info .info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+/* Contact */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  margin-top: 3.2rem;
+}
+
+.contact-form-bottom {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.contact-input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 1.6rem;
+  border-radius: var(--rounded-xs);
+  border: 1px solid #d2d5da;
+  background-color: #f3f4f6;
+}
+
+.coupon-input:focus,
+.contact-input:focus {
+  outline: 1px solid #d2d5da;
+}
+
+.contact-btn {
+  padding: 1.6rem;
+  background-color: #1d1d1f;
+  color: #fff;
+  font-weight: 500;
+  border-radius: var(--rounded-xs);
+  cursor: pointer;
 }
 
 /* Utilities */
@@ -169,5 +230,4 @@ body {
   width: 100%;
   height: 1px;
   background-color: #d2d5da;
-  margin: 2.4rem 0;
 }
